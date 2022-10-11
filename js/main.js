@@ -16,8 +16,9 @@
  function luongNV() {
     var oneSalary = document.getElementById('oneSalary').value;
     var numDay = document.getElementById('numDay').value
-    var result = Number(oneSalary) * Number(numDay)
-    document.getElementById('rsSalary').innerHTML = 'Lương một ngày làm là: ' + result + ' ' + 'VND';
+    var result = 0;
+    result = Number(oneSalary) * Number(numDay)
+    document.getElementById('rsSalary').innerHTML = 'Lương một ngày làm là: ' + result.toLocaleString() + ' ' + 'VND';
 }
 
 document.getElementById('btnSalary').onclick = luongNV
@@ -61,7 +62,7 @@ function chuyenDoi() {
     var usd = 23500;
     var vnd = document.getElementById('us').value
     var coverVND = Number(vnd) * Number(usd);
-    document.getElementById('rsCover').innerHTML = 'Số tiền USD sau khi quy đổi là:' + ' ' + coverVND + ' ' + 'VND';
+    document.getElementById('rsCover').innerHTML = 'Số tiền USD sau khi quy đổi là:' + ' ' + coverVND.toLocaleString() + ' ' + 'VND';
 }
 
 document.getElementById('btnCover').onclick = chuyenDoi;
